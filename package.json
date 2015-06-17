@@ -1,0 +1,28 @@
+{
+  "name": "q-foreach2",
+  "version": "1.0.0",
+  "description": "add foreach capability to Q",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:juji/q-foreach2.git"
+  },
+  "keywords": [
+    "q",
+    "foreach",
+    "array",
+    "promise"
+  ],
+  "author": "jujiyangasli@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juji/q-foreach2/issues"
+  },
+  "homepage": "https://github.com/juji/q-foreach2#readme",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
