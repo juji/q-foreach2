@@ -4,16 +4,9 @@ module.exports = exports = function(q){
 		var p = Q(0);
 		var ret = [];
 		for(var i in arr) 
-			p = p.then(function(idx){
-				return func(arr[idx],idx)
-				.then(function(res){
-					ret.push({error:null,result:res});
-					return ++idx;
-				}).fail(function(e){
-					ret.push({error:e,result:null});
-					return ++idx;
-				});
-			});
+			p = func(arr[i],i)
+			.then(function(r){ret.push({err:null,result:r});})
+			.fail(function(e){ret.push({err:e,result:null});});
 		return p.then(function(){ return ret; });
 	};
 	

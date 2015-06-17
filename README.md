@@ -20,11 +20,11 @@ Q.forEach(arr,function(val,index){
 	console.log(results);
 	/*
 	[
-		{error:null, result:2},
-		{error:null, result:3},
-		{error:null, result:4},
-		{error:null, result:5},
-		{error:null, result:6}
+		{err:null, result:2},
+		{err:null, result:3},
+		{err:null, result:4},
+		{err:null, result:5},
+		{err:null, result:6}
 	]
 	*/
 });
