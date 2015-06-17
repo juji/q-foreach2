@@ -5,7 +5,7 @@ module.exports = exports = function(q){
 		var ret = [];
 		for(var i in arr) 
 			p = p.then(function(idx){
-				return func(arr,idx)
+				return func(arr[idx],idx)
 				.then(function(res){
 					ret.push({error:null,result:res});
 					return ++idx;
