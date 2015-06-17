@@ -2,8 +2,6 @@
 
 Adds `forEach` functionality to Kriskowal's  `q`
 
-Only works for array
-
 ```javascript
 var Q = require('q');
 require('q-foreach2')(Q);
