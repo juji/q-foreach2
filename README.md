@@ -10,7 +10,7 @@ require('q-foreach2')(Q);
 
 var arr = [1,2,3,4,5];
 Q.forEach(arr,function(val,index){
-	return Q.timeout(500)
+	return Q.delay(500)
 	.then(function(){
 		console.log('Index: '+index);
 		console.log('Value: '+val);
