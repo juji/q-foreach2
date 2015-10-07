@@ -1,0 +1,71 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.3.3
+3 info using node@v0.12.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/media/files/work/repo/q-foreach2',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/juji/.npm/q-foreach2/1.0.9/package.tgz not in flight; packing
+9 info lifecycle q-foreach2@1.0.9~prepublish: q-foreach2@1.0.9
+10 silly lifecycle q-foreach2@1.0.9~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/home/juji/.npm/q-foreach2/1.0.9/package.tgz',
+11 verbose tar pack   '/media/files/work/repo/q-foreach2' ]
+12 verbose tarball /home/juji/.npm/q-foreach2/1.0.9/package.tgz
+13 verbose folder /media/files/work/repo/q-foreach2
+14 verbose addLocalTarball adding from inside cache /home/juji/.npm/q-foreach2/1.0.9/package.tgz
+15 silly cache afterAdd q-foreach2@1.0.9
+16 verbose afterAdd /home/juji/.npm/q-foreach2/1.0.9/package/package.json not in flight; writing
+17 verbose afterAdd /home/juji/.npm/q-foreach2/1.0.9/package/package.json written
+18 silly publish { name: 'q-foreach2',
+18 silly publish   version: '1.0.9',
+18 silly publish   description: 'add foreach capability to Q',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: '' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+ssh://git@github.com/juji/q-foreach2.git' },
+18 silly publish   keywords: [ 'q', 'foreach', 'array', 'promise' ],
+18 silly publish   author: { name: 'jujiyangasli@gmail.com' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/juji/q-foreach2/issues' },
+18 silly publish   homepage: 'https://github.com/juji/q-foreach2#readme',
+18 silly publish   dependencies: { q: '^1.4.1' },
+18 silly publish   readme: '#Q-foreach2\n\nAdds `forEach` functionality to Kriskowal\'s  `q`\n\nalso works with objects\n\n```javascript\nvar Q = require(\'q\');\nrequire(\'q-foreach2\')(Q);\n\nvar arr = [1,2,3,4,5];\nQ.forEach(arr,function(val,index){\n\treturn Q.delay(500)\n\t.then(function(){\n\t\tconsole.log(\'Index: \'+index);\n\t\tconsole.log(\'Value: \'+val);\n\t\treturn ++val;\n\t});\n}).then(function(results){\n\tconsole.log(results);\n\t/*\n\t[\n\t\t{err:null, result:2},\n\t\t{err:null, result:3},\n\t\t{err:null, result:4},\n\t\t{err:null, result:5},\n\t\t{err:null, result:6}\n\t]\n\t*/\n});\n```\n\nAnd for those lazy coders:\n```\nQ.foreach = Q.forEach;\n```',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '81c82b72b7a58bffb45a706151cf5052df986ec5',
+18 silly publish   _id: 'q-foreach2@1.0.9',
+18 silly publish   _shasum: 'a6a75cff478a314c28e9f7e9d78046cf40987ddb',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name q-foreach2
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/q-foreach2
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/juji/.npm/q-foreach2/1.0.9/package.tgz
+26 verbose stack Error: auth required for publishing
+26 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:137:14
+26 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
+26 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:106:3)
+26 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+26 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:72:5
+26 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+27 verbose cwd /media/files/work/repo/q-foreach2
+28 error Linux 4.1.7-200.fc22.x86_64
+29 error argv "node" "/usr/local/bin/npm" "publish"
+30 error node v0.12.4
+31 error npm  v3.3.3
+32 error code ENEEDAUTH
+33 error need auth auth required for publishing
+33 error need auth You need to authorize this machine using `npm adduser`
+34 verbose exit [ 1, true ]
