@@ -1,6 +1,6 @@
 {
   "name": "q-foreach2",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "add foreach capability to Q",
   "main": "index.js",
   "scripts": {
